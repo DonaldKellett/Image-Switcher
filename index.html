@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Product Switcher</title>
+</head>
+<body>
+	<h2>Demo Product Switcher</h2>
+	<p>If this is successful, I may use this in next year's JA Website.</p>
+	<div id="AA" style="display: none;">
+		<img src="blue.png" id="a" style="opacity: 0; -webkit-transition: opacity 2s; width: 200px; height: 200px;" />
+		<h3>Behold A Blue Picture!</h3>
+		<p>This is the description of the picture.  This picture is blue, 200px wide and 200px high.</p>
+	</div>
+	<div id="BB" style="display: none;">
+		<img src="red.png" id="b" style="opacity: 0; -webkit-transition: opacity 2s; width: 200px; height: 200px;" />
+		<h3>Behold A Red Picture!</h3>
+		<p>This is the description of the picture.  This picture is red, 200px wide and 200px high.</p>
+	</div>
+	<div id="CC" style="display: none;">
+		<img src="green.png" id="c" style="opacity: 0; -webkit-transition: opacity 2s; width: 200px; height: 200px;" />
+		<h3>Behold A Green Picture!</h3>
+		<p>This is the description of the picture.  This picture is green, 200px wide and 200px high.</p>
+	</div>
+	<script type="text/javascript">
+	function one() {
+		setTimeout('document.getElementById("AA").style.display = "block";',0);
+		setTimeout('document.getElementById("a").style.opacity = "1";',1000);
+		setTimeout('document.getElementById("a").style.opacity = "0";',5000);
+		setTimeout('document.getElementById("AA").style.display = "none";',7000);
+		setTimeout('two()',7000);
+	}
+	function two() {
+		setTimeout('document.getElementById("BB").style.display = "block";',0);
+		setTimeout('document.getElementById("b").style.opacity = "1";',1000);
+		setTimeout('document.getElementById("b").style.opacity = "0";',5000);
+		setTimeout('document.getElementById("BB").style.display = "none";',7000);
+		setTimeout('three()',7000);
+	}
+	function three() {
+		setTimeout('document.getElementById("CC").style.display = "block";',0);
+		setTimeout('document.getElementById("c").style.opacity = "1";',1000);
+		setTimeout('document.getElementById("c").style.opacity = "0";',5000);
+		setTimeout('document.getElementById("CC").style.display = "none";',7000);
+		setTimeout('one()',7000);
+	}
+	one();
+	</script>
+</body>
+</html>
